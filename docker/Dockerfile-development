@@ -1,0 +1,15 @@
+FROM node:10-alpine
+ENV NODE_ENV development
+USER root
+WORKDIR /maildev
+COPY package.json /maildev
+COPY package-lock.json /maildev
+RUN npm install
+WORKDIR /maildev/maildev
+ENTRYPOINT ["/maildev/maildev/bin/maildev"]
+CMD [ \
+  "--web", \
+  "1080", \
+  "--smtp", \
+  "1025", \
+]

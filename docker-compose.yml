@@ -1,0 +1,35 @@
+version: "3.7"
+
+#volumes:
+#  maildev-emails:
+#    name: maildev-emails
+
+networks:
+  maildev-network:
+    name: maildev-network
+    driver: bridge
+
+x-common: &common
+  restart: unless-stopped
+  networks:
+    - maildev-network
+
+services:
+
+  maildev-development:
+    <<: *common
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile-development
+    image: collective-maildev-local:default
+    container_name: maildev-development-local
+    volumes:
+      - type: bind
+        source: .
+        target: /maildev/maildev
+        #read_only: true
+        volume:
+          nocopy: true
+    ports:
+      - 127.0.0.1:10025:1025 # smtp
+      - 127.0.0.1:10080:1080 # ui
