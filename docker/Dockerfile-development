@@ -1,15 +1,8 @@
 FROM node:10-alpine
-ENV NODE_ENV development
 USER root
+ENV NODE_ENV development
+#WORKDIR /
+#COPY ./docker/entrypoint-development.sh /
+#RUN chmod 755 /entrypoint-development.sh
 WORKDIR /maildev
-COPY package.json /maildev
-COPY package-lock.json /maildev
-RUN npm install
-WORKDIR /maildev/maildev
-ENTRYPOINT ["/maildev/maildev/bin/maildev"]
-CMD [ \
-  "--web", \
-  "1080", \
-  "--smtp", \
-  "1025", \
-]
+ENTRYPOINT /bin/sh /maildev/docker/entrypoint-development.sh

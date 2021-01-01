@@ -26,8 +26,7 @@ services:
     volumes:
       - type: bind
         source: .
-        target: /maildev/maildev
-        #read_only: true
+        target: /maildev
         volume:
           nocopy: true
     ports:

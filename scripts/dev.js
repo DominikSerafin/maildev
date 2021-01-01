@@ -12,5 +12,5 @@ nodemon({
     '--verbose'
   ]
 }).on('start', function () {
-  setTimeout(sendEmails, 1000)
+  setTimeout(sendEmails, 2000)
 })
