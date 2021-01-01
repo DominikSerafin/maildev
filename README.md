@@ -12,6 +12,7 @@ https://hub.docker.com/r/DominikSerafin/maildev
 `docker-compose up --build --force-recreate`
 
 ```
-docker-compose up --detach --build --force-recreate &&
+docker-compose up --detach --build --force-recreate
 docker-compose logs --follow --tail=100
+
 ```
