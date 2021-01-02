@@ -146,7 +146,7 @@ var messages = [
           '<p>The wax at the bank was surfer wax!!!</p>' +
           '<p>The wax at the bank was surfer wax!!!</p>' +
           '<p>The wax at the bank was surfer wax!!!</p>' +
-          '</body></html>',
+          '</body></html>'
   },
 
   // Plain text email
@@ -156,7 +156,6 @@ var messages = [
     subject: 'You were right.',
     text: 'They are surfers.'
   },
-
 
   // HTML email w/ image
   {
