@@ -35,7 +35,7 @@ used to send your emails. Sending them here will result in them being captured
 by MailDev. Here's an example of using these with Nodemailer:
 
 To pass parameters, because the Dockerfile uses CMD, you need to specify the executable again.
-The Dockerfile specifically EXPOSES port 80 and 25, therefor you need to tell maildev to use them.
+The Dockerfile specifically EXPOSES port 1080 and 1025, therefor you need to tell maildev to use them.
 This example adds the base-pathname parameter.
 
 ```
