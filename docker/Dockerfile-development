@@ -5,4 +5,5 @@ ENV NODE_ENV development
 #COPY ./docker/entrypoint-development.sh /
 #RUN chmod 755 /entrypoint-development.sh
 WORKDIR /maildev
-ENTRYPOINT /bin/sh /maildev/docker/entrypoint-development.sh
+ENTRYPOINT tail -f /dev/null
+#ENTRYPOINT /bin/sh /maildev/docker/entrypoint-development.sh
