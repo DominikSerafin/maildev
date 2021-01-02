@@ -1,11 +1,3 @@
-
-/**
- * MailDev - index.js
- *
- * Author: Dan Farrelly <daniel.j.farrelly@gmail.com>
- * Licensed under the MIT License.
- */
-
 const program = require('commander')
 const async = require('async')
 const pkg = require('./package.json')
