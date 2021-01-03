@@ -67,7 +67,7 @@ describe('email', function () {
       attachments: [
         {
           filename: 'tyler.jpg',
-          path: path.join(__dirname, 'tyler.jpg'),
+          path: path.join(__dirname, 'resources/tyler.jpg'),
           cid: 'image'
         }
       ]
@@ -81,7 +81,7 @@ describe('email', function () {
       attachments: [
         {
           filename: 'wave.jpg',
-          path: path.join(__dirname, 'wave.jpg'),
+          path: path.join(__dirname, 'resources/wave.jpg'),
           cid: 'image'
         }
       ]

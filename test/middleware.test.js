@@ -87,7 +87,7 @@ describe('middleware', function () {
       attachments: [
         {
           filename: 'tyler.jpg',
-          path: path.join(__dirname, '/tyler.jpg'),
+          path: path.join(__dirname, '/resources/tyler.jpg'),
           cid: '12345'
         }
       ]

@@ -4,19 +4,19 @@
 
 version: "3.7"
 
-#volumes:
-#  maildev-emails:
-#    name: maildev-emails
+volumes:
+  maildev-development-data:
+    name: maildev-development-data
 
 networks:
-  maildev-network:
-    name: maildev-network
+  maildev-development-network:
+    name: maildev-development-network
     driver: bridge
 
 x-common: &common
   restart: unless-stopped
   networks:
-    - maildev-network
+    - maildev-development-network
 
 services:
 
@@ -25,9 +25,12 @@ services:
     build:
       context: .
       dockerfile: ./docker/Dockerfile-development
-    image: collective-maildev-local:default
+    image: maildev-development-local:default
     container_name: maildev-development-local
     volumes:
+      - type: volume
+        source: maildev-development-data
+        target: /var/maildev/data
       - type: bind
         source: .
         target: /wd/maildev

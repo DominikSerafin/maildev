@@ -89,7 +89,7 @@ var messages = [
     attachments: [
       {
         filename: 'tyler.jpg',
-        path: path.join(__dirname, '/../test/tyler.jpg'),
+        path: path.join(__dirname, '/../test/resources/tyler.jpg'),
         cid: 'image'
       }
     ]
@@ -104,7 +104,7 @@ var messages = [
     attachments: [
       {
         filename: 'wave.jpg',
-        path: path.join(__dirname, '/../test/wave.jpg'),
+        path: path.join(__dirname, '/../test/resources/wave.jpg'),
         cid: 'image'
       }
     ]
@@ -117,7 +117,7 @@ var messages = [
     cc: ['Johnny Third <johnny.third@fbi.gov>', 'Johnny Fourth <johnny.fourth@fbi.gov>'],
     bcc: ['Johnny Fifth <johnny.fifth@fbi.gov>', 'Johnny Sixth <johnny.sixth@fbi.gov>'],
     subject: '100% pure adrenaline!',
-    text: 'This is stimulating, but we\'re out of here.',
+    text: 'This is stimulating, but we\'re out of here.'
   },
 
   // Email with big list of naughty strings
