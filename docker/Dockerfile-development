@@ -10,5 +10,4 @@ RUN npm install
 #RUN chmod 755 entrypoint-development.sh
 WORKDIR /wd/maildev
 #ENTRYPOINT tail -f /dev/null
-#ENTRYPOINT /bin/sh /wd/maildev/docker/entrypoint-development.sh
-ENTRYPOINT npm run dev
+ENTRYPOINT /bin/sh /wd/maildev/docker/entrypoint-development.sh

@@ -1,5 +1,3 @@
 #!/bin/sh
-cd /maildev
-npm install
-tail -f /dev/null
-# npm run dev
+export PATH="/wd/node_modules/.bin:$PATH"
+npm run dev
