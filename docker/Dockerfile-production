@@ -15,6 +15,9 @@ USER node
 WORKDIR /home/node
 COPY --chown=node:node . /home/node
 COPY --chown=node:node --from=build /root/node_modules /home/node/node_modules
+USER root
+RUN mkdir --parents /var/maildev/data && chown --recursive node:node /var/maildev
+USER node
 EXPOSE 1080 1025
 ENTRYPOINT ["/home/node/bin/maildev"]
 CMD ["--web", "1080", "--smtp", "1025"]
