@@ -6,6 +6,7 @@ scripts
 test
 
 .*
+!.npmrc
 
 # Only add .min.js dependencies
 app/components/**/*.js*
@@ -15,3 +16,7 @@ appveyor.yml
 codecov.yml
 Dockerfile
 rules.json
+
+.github
+docker
+docker-compoose.yml
